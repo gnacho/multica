@@ -41,9 +41,6 @@
     "link_copied": "Enlace copiado",
     "copy_link_failed": "No se pudo copiar el enlace",
     "canvas_label": "Lienzo de imagen. Arrastra para desplazar, rueda para hacer zoom, doble clic para alternar el tamaño real.",
-    "previous": "Imagen anterior",
-    "next": "Imagen siguiente",
-    "sequence_position": "{{index}} / {{total}}",
     "unavailable": "Esa imagen ya no está disponible - se omitió."
   },
   "canvas": {
@@ -61,7 +58,10 @@
     "preview_unsupported": "Este tipo de archivo no se puede previsualizar.",
     "close": "Cerrar",
     "open_in_new_tab": "Abrir en una pestaña nueva",
-    "remove": "Quitar adjunto"
+    "remove": "Quitar adjunto",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "sequence_position": "{{index}} / {{total}}"
   },
   "link_hover": {
     "copy_link": "Copiar enlace",

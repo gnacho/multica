@@ -19,7 +19,22 @@
     "full_log": "Abrir registro completo",
     "message": "Mensaje del agente",
     "error": "Error",
-    "waiting_result": "Esperando el resultado de la herramienta..."
+    "waiting_result": "Esperando el resultado de la herramienta...",
+    "supplement_failure_turn_ended": "la ejecución terminó antes de la entrega",
+    "supplement_failure_turn_not_started": "el agente no estaba listo",
+    "supplement_failure_provider_rejected": "el agente rechazó el mensaje",
+    "supplement_failure_timeout": "la entrega agotó el tiempo de espera",
+    "supplement_failure_unknown": "motivo desconocido",
+    "supplement_retry": "Reintentar",
+    "supplement_retry_failed": "No se pudo reintentar la entrega.",
+    "steer_badge": "Añadido a la ejecución de {{names}}",
+    "steer_waiting": "Esperando a que {{name}} lo lea",
+    "steer_read": "Leído por {{name}}",
+    "steer_not_received": "{{name}} no lo recibió · {{reason}}",
+    "steer_resend": "Enviar como una ejecución nueva",
+    "steer_resend_failed": "No se pudo enviar como una ejecución nueva.",
+    "steer_step": "{{name}} añadido",
+    "steer_step_read": "Leído"
   },
   "status_catalog_error": {
     "title": "No se pudo cargar la lista de estados",
@@ -442,6 +457,7 @@
     "unpin_tooltip": "Desfijar de la barra lateral",
     "thread_nav_label": "Ir a la conversación de comentarios",
     "thread_nav_resolved_label": "{{title}} (resuelto)",
+    "thread_nav_reply_label": "{{author}}: {{title}}",
     "sidebar_tooltip": "Mostrar u ocultar la barra lateral derecha",
     "find": {
       "placeholder": "Buscar en la incidencia...",
@@ -493,7 +509,16 @@
     "activity_count_one": "{{count}} actividad",
     "activity_count_other": "{{count}} actividades",
     "show_more_activities_one": "Mostrar {{count}} actividad más",
-    "show_more_activities_other": "Mostrar {{count}} actividades más"
+    "show_more_activities_other": "Mostrar {{count}} actividades más",
+    "duplicate_marked": "marcó esta incidencia como duplicada de {{identifier}}",
+    "duplicate_unmarked": "desmarcó esta incidencia como duplicada de {{identifier}}",
+    "duplicate_unmarked_to": "desmarcó esta incidencia como duplicada de {{identifier}} y la movió a {{status}}",
+    "duplicate_unmarked_original_deleted": "eliminó la marca de duplicada, {{identifier}} fue eliminada",
+    "duplicate_added": "marcó {{identifier}} como duplicada de esta incidencia",
+    "duplicate_removed": "desmarcó {{identifier}} como duplicada de esta incidencia",
+    "status_changed_pr": "cambió el estado de {{from}} a {{to}} después de que todos los PR enlazados se fusionaran ({{prs}})",
+    "pr_auto_complete_disabled": "desactivó el auto-completado por PR para esta incidencia",
+    "pr_auto_complete_enabled": "reactivó el auto-completado por PR para esta incidencia"
   },
   "comment": {
     "add_reaction": "Añadir reacción",
@@ -542,6 +567,7 @@
     "delete_failed": "No se pudo eliminar el comentario",
     "reply_count_one": "{{count}} respuesta",
     "reply_count_other": "{{count}} respuestas",
+    "replying_to": "Respondiendo a {{name}}: {{preview}}",
     "leave_comment_placeholder": "Deja un comentario...",
     "send_tooltip": "Enviar",
     "trigger_source_issue_assignee": "asignado",
@@ -555,16 +581,6 @@
     "trigger_reason_mention_squad_leader": "Lidera un equipo mencionado aquí.",
     "trigger_reason_unknown": "Se iniciará a partir de este comentario.",
     "trigger_will_start": "Se iniciará al enviar",
-    "trigger_will_update_current": "Actualizará el trabajo actual",
-    "trigger_will_receive_count_one": "{{count}} agente recibirá esto",
-    "trigger_will_receive_count_other": "{{count}} agentes recibirán esto",
-    "trigger_current_work_short": "Trabajo actual",
-    "trigger_follow_up_short": "Seguimiento",
-    "trigger_current_safe_point": "Actualiza el trabajo actual en el próximo punto seguro.",
-    "delivery_pending": "Esperando para entregar al trabajo actual de {{name}}",
-    "delivery_delivered": "Entregado al trabajo actual de {{name}} · {{time}}",
-    "delivery_view_reply": "Ver respuesta final",
-    "delivery_follow_up": "{{name}} lo gestionará en un trabajo de seguimiento",
     "trigger_will_start_count_one": "{{count}} agente se iniciará al enviar",
     "trigger_will_start_count_other": "{{count}} agentes se iniciarán al enviar",
     "trigger_starts_now": "Se inicia enseguida.",
@@ -590,7 +606,23 @@
       "bar_authors_more_other": "{{names}} y {{count}} más",
       "resolve_failed": "No se pudo resolver la conversación",
       "unresolve_failed": "No se pudo reabrir la conversación"
-    }
+    },
+    "recipient_steer": "Añadir a la ejecución actual",
+    "recipient_steer_desc": "{{name}} lo lee tras el paso actual y sigue trabajando en la tarea original. Solo texto.",
+    "recipient_after_run": "Empezar tras esta ejecución",
+    "recipient_after_run_desc": "No interrumpe la ejecución actual; se procesa en una ejecución nueva después.",
+    "recipient_restart": "Detener y empezar de nuevo",
+    "recipient_restart_desc": "Detiene la ejecución actual ahora y empieza de nuevo desde este mensaje.",
+    "recipient_join": "Incluir al empezar",
+    "recipient_join_desc": "La ejecución de {{name}} aún está en cola y procesará este mensaje al arrancar.",
+    "recipient_state_running": "En ejecución",
+    "recipient_state_starting": "Iniciando",
+    "recipient_state_queued": "En cola",
+    "recipient_count_one": "{{count}} agente recibirá esto",
+    "recipient_count_other": "{{count}} agentes recibirán esto",
+    "steer_attachment_notice": "Solo el texto puede unirse a una ejecución en marcha, así que un mensaje con archivos se procesa después.",
+    "restart_send": "Detener y enviar",
+    "restart_failed": "No se pudo detener la ejecución actual. Tu mensaje no se envió."
   },
   "reply": {
     "placeholder": "Deja una respuesta...",
@@ -779,7 +811,8 @@
     "remove_parent_issue": "Quitar incidencia principal",
     "remove_parent_issue_success": "Incidencia principal quitada",
     "add_sub_issue": "Añadir subincidencia...",
-    "delete_issue": "Eliminar incidencia"
+    "delete_issue": "Eliminar incidencia",
+    "mark_duplicate": "Marcar como duplicada..."
   },
   "pickers": {
     "custom_property": {
@@ -827,6 +860,10 @@
       "manage_dialog_title": "Gestionar etiquetas",
       "create_action": "Crear",
       "create_failed": "No se pudo crear la etiqueta"
+    },
+    "status": {
+      "mark_duplicate": "Marcar como duplicada",
+      "change_original": "Cambiar la original"
     }
   },
   "labels_panel": {
@@ -1079,5 +1116,44 @@
     },
     "hourly": "Activar cada hora",
     "today_time": "Hoy {{time}}"
+  },
+  "duplicates": {
+    "banner_prefix": "Duplicada de",
+    "unmark": "No es una duplicada",
+    "section_title": "Duplicadas",
+    "unmark_toast": "Reabierta como Todo"
+  },
+  "pr_automation": {
+    "link_action": "Enlazar pull request",
+    "link_placeholder": "Pega la URL de un pull request",
+    "link_hint": "Los PR con {{identifier}} en el título o el nombre de la rama se enlazan automáticamente.",
+    "link_submit": "Enlazar",
+    "link_not_found": "Multica aún no ha recibido este PR. Comprueba que su repositorio esté conectado.",
+    "link_failed": "No se pudo enlazar el pull request.",
+    "row_menu": "Acciones del pull request",
+    "section_menu": "Automatización de pull request",
+    "source_title": "Enlazado por {{identifier}} en el título",
+    "source_branch": "Enlazado por el nombre de la rama",
+    "source_manual": "Enlazado manualmente",
+    "source_auto": "Enlazado automáticamente",
+    "unlink": "Quitar de la incidencia",
+    "unlinked": "{{pr}} eliminado",
+    "unlinked_completed": "{{pr}} eliminado. Todos los PR restantes están fusionados, así que la incidencia está completada.",
+    "unlink_failed": "No se pudo quitar el pull request.",
+    "undo": "Deshacer",
+    "disable": "Desactivar auto-completado",
+    "enable": "Activar auto-completado",
+    "settings": "Ajustes de auto-completado",
+    "update_failed": "No se pudo actualizar el auto-completado.",
+    "waiting_one": "Se completa cuando {{prs}} se fusione",
+    "waiting_other": "Se completa cuando {{prs}} se fusionen",
+    "not_merged": "{{prs}} se cerró sin fusionarse",
+    "not_merged_action": "Quitar",
+    "no_close_intent": "No se completará: sin «Closes {{identifier}}»",
+    "all_merged": "Todos los PR fusionados. El próximo PR fusionado completará esta incidencia.",
+    "issue_disabled": "El auto-completado está desactivado para esta incidencia",
+    "issue_disabled_action": "Activar",
+    "workspace_disabled": "El auto-completado por PR está desactivado para este espacio de trabajo",
+    "workspace_disabled_action": "Ajustes"
   }
 }

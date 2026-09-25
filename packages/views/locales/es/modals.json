@@ -35,7 +35,9 @@
     "search_placeholder": "Buscar incidencias...",
     "searching": "Buscando...",
     "no_results": "No se encontraron incidencias.",
-    "prompt_to_search": "Escribe para buscar incidencias"
+    "prompt_to_search": "Escribe para buscar incidencias",
+    "suggested_similar": "Títulos similares",
+    "suggested_recent": "Vistos recientemente"
   },
   "set_parent": {
     "title": "Establecer incidencia padre",
@@ -186,6 +188,7 @@
     "toast_link_subissues_partial": "No se pudieron vincular {{failed}} de {{total}} subincidencias",
     "toast_link_labels_failed": "No se pudieron adjuntar las etiquetas",
     "toast_set_properties_failed": "No se pudieron establecer {{count}} valores de propiedad personalizada",
+    "unavailable_property_removed": "Se eliminó del borrador una propiedad personalizada no disponible. Revísalo antes de enviarlo de nuevo.",
     "switch_to_agent": "Cambiar a agente",
     "switch_to_agent_tooltip": "Cambiar a creación con agente - describe en una línea y deja que el agente la registre",
     "switch_to_manual": "Cambiar a manual",
@@ -245,5 +248,13 @@
       "error_unknown": "No se pudo enviar. Inténtalo de nuevo.",
       "sub_issue_of": "Subincidencia de {{identifier}}"
     }
+  },
+  "mark_duplicate": {
+    "title": "Marcar como duplicada",
+    "description": "Busca la incidencia original. Esta incidencia se cancelará y se enlazará a ella.",
+    "toast_success": "Marcada como duplicada de {{identifier}}",
+    "toast_failed": "No se pudo marcar como duplicada",
+    "error_target_is_duplicate": "{{identifier}} es en sí misma una duplicada. Elige su original.",
+    "error_has_duplicates": "Otras incidencias están marcadas como duplicadas de esta. Elimina esas marcas primero."
   }
 }

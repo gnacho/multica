@@ -81,7 +81,13 @@
       "blocked": "Detenido por una dependencia externa.",
       "done": "Completado.",
       "cancelled": "Se decidió no hacerlo."
-    }
+    },
+    "automation_title": "Automatización",
+    "pr_auto_complete_label": "Completar incidencias cuando sus PR se fusionen",
+    "pr_auto_complete_description": "Una incidencia pasa a Hecho cuando todos sus PR enlazados se fusionan y uno de ellos la cierra con una palabra clave. Se aplica a los PR fusionados a partir de ahora.",
+    "pr_auto_complete_example": "Escribe la palabra clave en el título o la descripción del PR, p. ej.",
+    "pr_auto_complete_example_title": "Closes MUL-123",
+    "pr_auto_complete_badge": "Se establece al fusionar los PR"
   },
   "quick_actions": {
     "title": "Acciones rápidas",
@@ -162,6 +168,12 @@
     },
     "sticky_comment_bar": {
       "title": "Fijar la barra de comentarios abajo"
+    },
+    "running_agent_reply": {
+      "title": "Al responder a un agente en ejecución",
+      "steer": "Añadir a la ejecución actual",
+      "after_run": "Empezar tras esta ejecución",
+      "hint": "Solo establece el valor predeterminado. Puedes cambiarlo para cualquier mensaje antes de enviarlo."
     },
     "issue_title": "Creación de incidencias",
     "comments_title": "Comentarios",
@@ -758,10 +770,6 @@
     "master_description_off": "Las funciones de GitHub están en pausa. Los datos existentes se conservan.",
     "section_connection": "Conexión",
     "connection_title": "GitHub App",
-    "connection_description_prefix": "Vincula incidencias a pull requests automáticamente. Un PR se vincula cuando",
-    "connection_description_suffix": "está en su nombre de rama o título, o su cuerpo dice Closes MUL-123. Al fusionar un PR con esa palabra clave de cierre, la incidencia también pasa a",
-    "connection_description_done": "Completado",
-    "connection_identifier_example": "MUL-123",
     "connected_to": "Conectado como {{login}}",
     "connect_github": "Conectar GitHub",
     "connect_opening": "Abriendo…",
@@ -791,7 +799,12 @@
     "section_repositories": "Repositorios",
     "repositories_shortcut_label": "Las URL de los repositorios están en la pestaña Repositorios",
     "repositories_shortcut_link": "Gestionar repositorios →",
-    "toast_failed": "Error al actualizar la configuración de GitHub"
+    "toast_failed": "Error al actualizar la configuración de GitHub",
+    "feature_auto_link_description": "Enlaza un PR con la incidencia cuyo ID, p. ej. {{example}}, aparece en su título o nombre de rama, o tras «Closes» en su descripción.",
+    "feature_pr_auto_complete_label": "Completar incidencias cuando sus PR se fusionen",
+    "feature_pr_auto_complete_on": "Activado · compartido por todas las plataformas de código",
+    "feature_pr_auto_complete_off": "Desactivado · compartido por todas las plataformas de código",
+    "feature_pr_auto_complete_manage": "Gestionar"
   },
   "vcs": {
     "section_title": "Proveedores de Git (self-hosted)",
@@ -873,6 +886,8 @@
     "agent_bot_connected_label_lark": "Conectado a Lark",
     "agent_bot_manage_link_feishu": "Gestionar en Feishu",
     "agent_bot_manage_link_lark": "Gestionar en Lark",
+    "agent_bot_silent_hint": "¿Bot conectado pero silencioso? Comprueba que la aplicación entregue eventos por la conexión persistente.",
+    "agent_bot_silent_hint_link": "Solución de problemas",
     "agent_bot_manage_tooltip_feishu": "Abre la página de la app de este Bot en Feishu: gestiona alcances, edita el nombre visible y solicita permisos adicionales.",
     "agent_bot_manage_tooltip_lark": "Abre la página de la app de este Bot en Lark: gestiona alcances, edita el nombre visible y solicita permisos adicionales.",
     "agent_bot_disconnect_tooltip": "Desvincula este Lark Bot del Agente. El bot dejará de recibir mensajes de Lark.",
