@@ -16,11 +16,7 @@
       "reorder": "Reordenar {{name}}"
     },
     "reorder_hint": "Arrastra dentro de una categoría para reordenar tableros, listas y menús.",
-    "built_in_dialog": {
-      "title": "El estado integrado no se puede cambiar",
-      "description": "Los estados integrados los usa Multica y no se pueden editar ni archivar. Sí puedes cambiar su orden dentro de la categoría.",
-      "confirm": "Entendido"
-    },
+    "built_in_dialog": {},
     "editor": {
       "create_title": "Nuevo estado",
       "edit_title": "Editar estado",
@@ -82,12 +78,8 @@
       "done": "Completado.",
       "cancelled": "Se decidió no hacerlo."
     },
-    "automation_title": "Automatización",
-    "pr_auto_complete_label": "Completar incidencias cuando sus PR se fusionen",
-    "pr_auto_complete_description": "Una incidencia pasa a Hecho cuando todos sus PR enlazados se fusionan y uno de ellos la cierra con una palabra clave. Se aplica a los PR fusionados a partir de ahora.",
-    "pr_auto_complete_example": "Escribe la palabra clave en el título o la descripción del PR, p. ej.",
-    "pr_auto_complete_example_title": "Closes MUL-123",
-    "pr_auto_complete_badge": "Se establece al fusionar los PR"
+    "pr_auto_complete_badge": "Se establece al fusionar los PR",
+    "built_in_locked": "Los estados integrados controlan el comportamiento del sistema, así que no se pueden editar ni archivar. Sí puedes reordenarlos."
   },
   "quick_actions": {
     "title": "Acciones rápidas",
@@ -143,7 +135,6 @@
     "toast_saved": "Cambios guardados"
   },
   "preferences": {
-    "general_title": "General",
     "theme": {
       "title": "Tema",
       "light": "Claro",
@@ -164,7 +155,9 @@
       "title": "Zona horaria de visualización",
       "browser_suffix": " (navegador)",
       "hint": "Se usa para fechas y gráficas en todos tus espacios de trabajo.",
-      "sync_failed": "No se pudo guardar tu preferencia de zona horaria."
+      "sync_failed": "No se pudo guardar tu preferencia de zona horaria.",
+      "empty": "Ninguna zona horaria coincide",
+      "search": "Buscar zonas horarias..."
     },
     "sticky_comment_bar": {
       "title": "Fijar la barra de comentarios abajo"
@@ -175,10 +168,16 @@
       "after_run": "Empezar tras esta ejecución",
       "hint": "Solo establece el valor predeterminado. Puedes cambiarlo para cualquier mensaje antes de enviarlo."
     },
-    "issue_title": "Creación de incidencias",
     "comments_title": "Comentarios",
-    "device_hint": "Guardado en este dispositivo.",
-    "issue_scope": "Estas preferencias se aplican a este espacio de trabajo en este dispositivo. Solo cambian qué campos ves al crear una incidencia."
+    "appearance_title": "Apariencia",
+    "issue_fields": {
+      "field": "Campo",
+      "manual": "Creación manual",
+      "quick": "Crear con agente",
+      "unsupported": "No disponible al crear con un agente"
+    },
+    "issue_fields_title": "Campos al crear incidencias",
+    "region_title": "Idioma y región"
   },
   "shortcuts": {
     "title": "Atajos de teclado",
@@ -313,14 +312,11 @@
     }
   },
   "chat": {
-    "floating_title": "Ventana flotante",
     "floating_label": "Ventana de chat flotante",
     "floating_hint": "Muestra el botón de chat flotante en todas las páginas."
   },
   "issue": {
     "description": "Elige qué campos mantiene cada diálogo de creación en su barra de herramientas. Los campos ocultos siguen disponibles en el menú ⋯ y reaparecen mientras tengan un valor.",
-    "quick_create_title": "Crear con campos de la barra del agente",
-    "manual_create_title": "Campos de la barra de creación manual",
     "fields": {
       "status": "Estado",
       "priority": "Prioridad",
@@ -329,10 +325,16 @@
       "project": "Proyecto",
       "due_date": "Fecha de entrega",
       "start_date": "Fecha de inicio"
+    },
+    "opening": {
+      "click": "Al hacer clic en una tarjeta o fila se abre",
+      "hint": "Mayús+Clic abre la otra opción.",
+      "page": "Página completa",
+      "peek": "Vista previa lateral",
+      "title": "Apertura de incidencias"
     }
   },
   "mcp": {
-    "title": "MCP",
     "description": "Tras añadir un servidor, asígnalo desde la pestaña MCP de un agente.",
     "servers_title": "Servidores compartidos",
     "write_only_note": "Por seguridad, las URL, comandos, cabeceras y valores de entorno guardados no se vuelven a mostrar. Para cambiarlos, introduce una configuración nueva completa. Al renombrar se conservan la configuración actual y las asignaciones a agentes.",
@@ -349,7 +351,6 @@
     "remove_action": "Eliminar",
     "empty_title": "No hay servidores MCP compartidos",
     "disabled_badge": "Desactivado",
-    "admin_only_note": "Solo los propietarios y administradores del espacio de trabajo pueden cambiar los servidores MCP compartidos.",
     "delete_title": "¿Eliminar servidor compartido?",
     "delete_description": "{{name}} se eliminará de la biblioteca y de todos los agentes a los que esté asignado; se aplicará en su próxima ejecución.",
     "delete_confirm": "Eliminar",
@@ -371,13 +372,10 @@
       "preferences": "Preferencias",
       "shortcuts": "Atajos",
       "issue": "Incidencia",
-      "chat": "Chat",
       "notifications": "Notificaciones",
       "tokens": "Tokens de API",
       "general": "General",
-      "repositories": "Repositorios",
       "github": "GitHub",
-      "integrations": "Integraciones",
       "labs": "Labs",
       "members": "Miembros",
       "labels": "Etiquetas",
@@ -386,7 +384,11 @@
       "quick_actions": "Acciones rápidas",
       "plugins": "Plugins",
       "mcp": "MCP",
-      "billing": "Facturación"
+      "billing": "Facturación",
+      "apps": "Apps conectadas",
+      "channels": "Mensajería",
+      "code": "Código",
+      "wakeups": "Despertares"
     },
     "groups": {
       "personal": "Personal",
@@ -396,15 +398,18 @@
       "device": "Aplicación de escritorio"
     },
     "navigate": "Ir a la página de configuración",
-    "device_scope": "Este dispositivo"
+    "admin_only": "Solo los propietarios y administradores pueden cambiar esto",
+    "search": "Buscar ajustes",
+    "search_clear": "Borrar búsqueda",
+    "search_empty": "Ningún ajuste coincide",
+    "search_results_one": "{{count}} resultado",
+    "search_results_other": "{{count}} resultados"
   },
   "plugins": {
     "title": "Plugins",
     "loading": "Cargando Plugins",
     "load_failed": "No se pudieron cargar los Plugins",
     "load_failed_description": "Inténtalo de nuevo. Los Plugins instalados no se ven afectados.",
-    "read_only": "Acceso de solo lectura",
-    "read_only_description": "Los propietarios y administradores del espacio de trabajo pueden instalar, configurar y eliminar Plugins.",
     "empty": "Aún no hay Plugins instalados.",
     "action_failed": "La acción del Plugin falló",
     "enabled": "Plugin activado",
@@ -616,9 +621,7 @@
     "profile_description_too_long": "El perfil es demasiado largo (máx. {{max}} caracteres; actualmente {{count}}).",
     "save": "Actualizar perfil",
     "saving": "Actualizando...",
-    "toast_avatar_updated": "Avatar actualizado",
     "toast_avatar_failed": "Error al subir el avatar",
-    "toast_profile_updated": "Perfil actualizado",
     "toast_profile_failed": "Error al actualizar el perfil"
   },
   "notifications": {
@@ -715,7 +718,6 @@
     "logo_label": "Logo del espacio de trabajo",
     "change_logo_aria": "Cambiar logo del espacio de trabajo",
     "click_logo_hint": "Haz clic en el logo para subir una imagen nueva",
-    "toast_logo_updated": "Logo del espacio de trabajo actualizado",
     "toast_logo_failed": "Error al subir el logo del espacio de trabajo",
     "name_label": "Nombre",
     "description_label": "Descripción",
@@ -725,12 +727,8 @@
     "slug_label": "Slug",
     "issue_prefix_label": "Prefijo de incidencia",
     "issue_prefix_hint": "Se usa en números de incidencia como {{example}}.",
-    "prefix_confirm_title": "¿Cambiar el prefijo de incidencia?",
-    "prefix_confirm_description": "Todas las incidencias se renumerarán de {{oldPrefix}}-N a {{newPrefix}}-N. Las referencias externas (títulos de pull requests, nombres de rama, enlaces en documentación y chat) que usen {{oldPrefix}}-N dejarán de resolverse.",
     "save": "Guardar",
     "saving": "Guardando...",
-    "manage_hint": "Solo los administradores y propietarios pueden actualizar la configuración del espacio de trabajo.",
-    "toast_saved": "Configuración del espacio de trabajo guardada",
     "toast_save_failed": "Error al guardar la configuración del espacio de trabajo",
     "danger_zone": "Zona peligrosa",
     "leave_title": "Abandonar espacio de trabajo",
@@ -748,7 +746,18 @@
     "deleting": "Eliminando...",
     "toast_delete_failed": "Error al eliminar el espacio de trabajo",
     "confirm_cancel": "Cancelar",
-    "confirm_action": "Confirmar"
+    "confirm_action": "Confirmar",
+    "change_prefix": "Cambiar prefijo...",
+    "context_hint": "Se da a cada agente de este espacio de trabajo en cada ejecución.",
+    "copy_failed": "No se pudo copiar al portapapeles",
+    "copy_slug": "Copiar slug",
+    "prefix_confirm_action": "Cambiar a {{prefix}}",
+    "prefix_dialog_description": "Todas las incidencias se renumeran, incluidas las completadas y canceladas.",
+    "prefix_dialog_title": "Cambiar el prefijo de incidencia",
+    "prefix_external_warning": "Las claves antiguas como {{oldExample}} en títulos de PR, nombres de rama, documentación y chat no se actualizan, así que esos enlaces dejan de funcionar.",
+    "prefix_new_label": "Nuevo prefijo",
+    "prefix_rule": "Solo letras y números, hasta 10 caracteres.",
+    "slug_hint": "Forma parte de cada URL del espacio de trabajo. No se puede cambiar."
   },
   "delete_workspace_dialog": {
     "title": "Eliminar espacio de trabajo",
@@ -765,15 +774,10 @@
     "toast_failed": "Error al actualizar la configuración"
   },
   "github": {
-    "section_master": "Activar funciones de GitHub",
-    "master_description_on": "Desactivar esto pausa las funciones de GitHub y conserva los datos existentes.",
     "master_description_off": "Las funciones de GitHub están en pausa. Los datos existentes se conservan.",
-    "section_connection": "Conexión",
-    "connection_title": "GitHub App",
     "connected_to": "Conectado como {{login}}",
     "connect_github": "Conectar GitHub",
     "connect_opening": "Abriendo…",
-    "connect_disabled_tooltip": "La GitHub App no está configurada en este servidor",
     "disconnect": "Desconectar",
     "disconnecting": "Desconectando…",
     "disconnect_confirm_title": "Desconectar la GitHub App",
@@ -782,29 +786,23 @@
     "disconnect_confirm_action": "Desconectar",
     "not_configured": "La integración con GitHub no está configurada en esta instalación. Los operadores deben definir",
     "not_configured_and": "y",
-    "read_only_hint": "Vista de solo lectura. Solo los administradores y propietarios del espacio de trabajo pueden conectar o desconectar GitHub.",
     "contact_admin_to_connect": "GitHub no está conectado en este espacio de trabajo. Pide a un administrador o propietario que configure la GitHub App.",
     "connected_by": "Conectado por {{name}}",
     "toast_not_configured": "La integración con GitHub no está configurada en esta instalación",
     "toast_open_failed": "Error al abrir la instalación de GitHub",
     "toast_disconnect_failed": "Error al desconectar la GitHub App",
     "toast_disconnected": "GitHub App desconectada",
-    "section_features": "Funciones",
     "feature_pr_sidebar_label": "Barra lateral de pull requests",
     "feature_pr_sidebar_description": "Muestra los pull requests vinculados dentro de la barra lateral del detalle de la incidencia.",
     "feature_co_author_label": "Trailer Co-authored-by",
     "feature_co_author_description_prefix": "Añade",
     "feature_co_author_description_suffix": "a los commits creados por agentes.",
     "feature_auto_link_label": "Vincular incidencias y PR automáticamente",
-    "section_repositories": "Repositorios",
-    "repositories_shortcut_label": "Las URL de los repositorios están en la pestaña Repositorios",
-    "repositories_shortcut_link": "Gestionar repositorios →",
     "toast_failed": "Error al actualizar la configuración de GitHub",
     "feature_auto_link_description": "Enlaza un PR con la incidencia cuyo ID, p. ej. {{example}}, aparece en su título o nombre de rama, o tras «Closes» en su descripción.",
-    "feature_pr_auto_complete_label": "Completar incidencias cuando sus PR se fusionen",
-    "feature_pr_auto_complete_on": "Activado · compartido por todas las plataformas de código",
-    "feature_pr_auto_complete_off": "Desactivado · compartido por todas las plataformas de código",
-    "feature_pr_auto_complete_manage": "Gestionar"
+    "pause": "Pausar funciones de GitHub",
+    "resume": "Reanudar funciones de GitHub",
+    "status_paused": "En pausa"
   },
   "vcs": {
     "section_title": "Proveedores de Git (self-hosted)",
@@ -834,7 +832,6 @@
     "disconnect_confirm_description": "Los pull requests reflejados y sus enlaces a incidencias de esta conexión se eliminarán. No se puede deshacer.",
     "disconnect_confirm_cancel": "Cancelar",
     "disconnect_confirm_action": "Desconectar",
-    "toast_connected": "Proveedor conectado",
     "toast_connect_failed": "No se pudo conectar con el proveedor",
     "toast_disconnected": "Proveedor desconectado",
     "toast_disconnect_failed": "No se pudo desconectar",
@@ -844,8 +841,11 @@
     "rotate_confirm_cancel": "Cancelar",
     "rotate_confirm_action": "Regenerar",
     "rotating": "Regenerando...",
-    "toast_rotated": "Secreto del webhook regenerado",
-    "toast_rotate_failed": "No se pudo regenerar el secreto del webhook"
+    "toast_rotate_failed": "No se pudo regenerar el secreto del webhook",
+    "connect_another": "Conectar otro",
+    "connection_actions": "Acciones de {{url}}",
+    "hosts_hint": "GitLab, Gitea o Forgejo.",
+    "webhook_done": "Ya lo he guardado"
   },
   "lark": {
     "section_title": "Lark",
@@ -923,7 +923,6 @@
     "install_error_generic": "La instalación falló. Inténtalo de nuevo."
   },
   "composio": {
-    "section_title": "Composio",
     "page_description": "Conecta apps que tus agentes pueden usar.",
     "not_enabled_title": "La integración con Composio no está activada",
     "not_enabled_description_prefix": "Define",
@@ -1154,7 +1153,6 @@
     "section_title": "Repositorios",
     "description": "Los agentes pueden usar estos repositorios para trabajar en el código.",
     "url_placeholder": "https://git.example.com/org/repo.git o git@git.example.com:org/repo.git",
-    "url_empty": "(URL vacía)",
     "description_placeholder": "Descripción (p. ej. backend en Go + frontend en Next.js)",
     "add": "Añadir repositorio",
     "connect_github": "Conectar GitHub",
@@ -1177,21 +1175,26 @@
     "github_selected_count": "{{count}} seleccionados",
     "github_cancel": "Cancelar",
     "github_import": "Añadir repositorios",
-    "complete_manual_entry_first": "Completa o elimina el repositorio manual vacío antes de importar.",
     "save": "Guardar",
     "saving": "Guardando...",
     "saved_hint": "Todos los cambios guardados",
     "empty": "Aún no hay repositorios.",
     "edit_aria": "Editar repositorio",
     "cancel_aria": "Cancelar edición",
-    "delete_aria": "Eliminar repositorio",
     "delete_confirm_title": "¿Eliminar repositorio?",
     "delete_confirm_description": "Este repositorio se eliminará del espacio de trabajo inmediatamente.",
     "delete_confirm_cancel": "Cancelar",
     "delete_confirm_action": "Eliminar repositorio",
     "manage_hint": "Solo los administradores y propietarios pueden gestionar repositorios.",
-    "toast_saved": "Repositorios guardados",
-    "toast_save_failed": "Error al guardar los repositorios"
+    "toast_save_failed": "Error al guardar los repositorios",
+    "actions_aria": "Acciones de {{url}}",
+    "add_manually": "Introduce una URL...",
+    "add_title": "Añadir repositorio",
+    "description_label": "Descripción",
+    "duplicate": "Este repositorio ya está añadido.",
+    "edit": "Editar",
+    "edit_title": "Editar repositorio",
+    "url_label": "URL del repositorio"
   },
   "desktop": {
     "tabs": {
@@ -1287,7 +1290,6 @@
     }
   },
   "members": {
-    "section_title": "Miembros ({{count}})",
     "invite_title": "Invitar miembro",
     "invite_email_placeholder": "usuario@empresa.com",
     "invite_button": "Invitar",
@@ -1304,9 +1306,6 @@
     "seat_purchase_timeout": "La compra del asiento se envió, pero la confirmación está tardando más de lo esperado. No se envió ninguna invitación. Reintenta la invitación cuando Facturación muestre un asiento disponible.",
     "seat_purchase_capacity_taken": "El asiento comprado ya no está disponible, así que no se envió la invitación. Revisa los asientos actuales antes de reintentarlo.",
     "no_members": "No se encontraron miembros.",
-    "pending_title": "Invitaciones pendientes ({{count}})",
-    "pending_status": "Pendiente",
-    "revoke_invitation_tooltip": "Revocar invitación",
     "revoke_invitation_title": "Revocar invitación",
     "revoke_invitation_description": "¿Revocar la invitación a {{email}}? Ya no podrá unirse a este espacio de trabajo.",
     "toast_invitation_revoked": "Invitación revocada",
@@ -1337,9 +1336,6 @@
         "description": "Crea incidencias y trabaja en ellas"
       }
     },
-    "share_links_title": "Enlaces de invitación",
-    "role_field": "Rol:",
-    "expiry_field": "Caducidad:",
     "share_links_create_title": "Crear enlace de invitación",
     "share_links_create_button": "Generar",
     "share_links_creating": "Generando...",
@@ -1356,21 +1352,88 @@
     "expiry_24h": "24 horas",
     "expiry_7d": "7 días",
     "expiry_30d": "30 días",
-    "expiry_never": "Nunca"
+    "expiry_never": "Nunca",
+    "email_label": "Correo electrónico",
+    "expiry_label": "Caduca después de",
+    "invitation_meta": "Enviada {{sent}} · Caduca {{expires}}",
+    "joined": "Se unió el {{date}}",
+    "manage_seats": "Gestionar asientos",
+    "member_actions": "Acciones de {{name}}",
+    "members_label": "Miembros",
+    "no_invitations": "No hay invitaciones pendientes.",
+    "no_results": "Ningún miembro coincide con esta búsqueda.",
+    "no_share_links": "Aún no hay enlaces de invitación.",
+    "pending_label": "Invitaciones pendientes",
+    "revoke_invitation_aria": "Revocar invitación de {{email}}",
+    "role_label": "Rol",
+    "search_placeholder": "Buscar por nombre o correo electrónico",
+    "seats_used": "{{used}} de {{purchased}} asientos usados",
+    "share_links_description": "Cualquiera con el enlace puede unirse con el rol elegido hasta que caduque o lo revoques.",
+    "share_links_label": "Enlaces de invitación",
+    "you": "Tú"
   },
   "integrations": {
-    "code_title": "Código y repositorios",
-    "messaging_title": "Canales de mensajería",
-    "apps_title": "Tus apps conectadas",
-    "apps_scope": "Estas conexiones de apps pertenecen a tu cuenta. Las conexiones de canales del espacio de trabajo se gestionan arriba.",
-    "github_hint": "Conecta GitHub y configura la vinculación de pull requests.",
-    "vcs_hint": "Conecta GitLab, Gitea o Forgejo.",
-    "apps_hint": "Autoriza apps para tus agentes a través de Composio.",
-    "back": "Todas las integraciones",
     "status_connected": "Conectado",
     "status_not_connected": "No conectado",
     "status_loading": "Comprobando...",
-    "status_unknown": "Estado no disponible",
-    "channel_hint": "Chatea con agentes y crea incidencias desde {{channel}}."
+    "status_unknown": "Estado no disponible"
+  },
+  "channels": {
+    "breadcrumb": "Migas de pan"
+  },
+  "code": {
+    "github_actions": "Acciones de GitHub",
+    "hosting_title": "Alojamiento de código",
+    "pr_linking_title": "Pull requests e incidencias"
+  },
+  "layout": {
+    "read_only": {
+      "contact": "Solo los propietarios y administradores pueden cambiar estos ajustes. Pídeselo a {{names}}.",
+      "description": "Solo los propietarios y administradores del espacio de trabajo pueden cambiar estos ajustes.",
+      "separator": ", ",
+      "title": "Solo lectura"
+    },
+    "scope": {
+      "account": "Cuenta · sincronizado",
+      "device": "Solo este dispositivo",
+      "device_workspace": "Este dispositivo · {{name}}",
+      "workspace": "Espacio de trabajo {{name}}",
+      "workspace_only": "Solo en {{name}}"
+    }
+  },
+  "mcp_sources": {
+    "apps": "Autorizadas con tu propia cuenta a través de Composio y activadas en agentes que posees.",
+    "current": "Esta página",
+    "mcp": "Añadidas por administradores y compartidas en todo el espacio de trabajo, y luego asignadas por agente.",
+    "plugins": "Paquetes instalados que pueden añadir herramientas, ganchos programados y almacenamiento, cada uno con sus propios permisos.",
+    "title": "Formas de dar herramientas a los agentes"
+  },
+  "mcp_usage": {
+    "agent_count_one": "La usa {{count}} agente",
+    "agent_count_other": "La usan {{count}} agentes",
+    "none": "No asignada a ningún agente"
+  },
+  "pr_merge_status": {
+    "description": "Se aplica cuando todos los PR enlazados a una incidencia se hayan fusionado, y solo a fusiones a partir de ahora.",
+    "label": "Al fusionarse los PR, mover la incidencia a",
+    "none": "No cambiar"
+  },
+  "wakeups": {
+    "admin_only": "Solo los propietarios y administradores pueden cambiar estos valores predeterminados.",
+    "builtin": "Instrucción integrada",
+    "child_done_description": "Despierta al responsable del padre cuando una etapa termina y otra posterior está en espera, y una vez más cuando todas las subincidencias se cierran. Si el responsable es un miembro, recibe una notificación en la bandeja de entrada.",
+    "child_done_title": "Al terminar las subincidencias",
+    "customized_one": "{{count}} incidencia abierta tiene su propio ajuste e ignora este valor predeterminado.",
+    "customized_other": "{{count}} incidencias abiertas tienen su propio ajuste e ignoran este valor predeterminado.",
+    "description": "Reglas de la plataforma que se aplican a cada incidencia. Cada incidencia puede cambiarlas en su sección de Despertares.",
+    "enabled": "Activado por defecto",
+    "instruction": "Instrucción predeterminada",
+    "instruction_hint": "Se envía al agente despertado. Déjala vacía para usar la instrucción integrada de abajo.",
+    "instruction_invalid": "Mantén la instrucción dentro de 4.000 bytes.",
+    "instruction_placeholder": "Déjala vacía para usar la instrucción integrada",
+    "load_error": "No se pudieron cargar los valores predeterminados de despertares.",
+    "save": "Guardar",
+    "save_error": "No se pudo guardar el valor predeterminado.",
+    "saving": "Guardando…"
   }
 }

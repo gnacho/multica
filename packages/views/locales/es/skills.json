@@ -120,7 +120,9 @@
     "sort_by": "Ordenar por",
     "direction_asc": "Ascendente",
     "direction_desc": "Descendente",
-    "section_columns": "Columnas"
+    "section_columns": "Columnas",
+    "manage_labels": "Gestionar etiquetas...",
+    "manage_labels_title": "Etiquetas de skills"
   },
   "detail": {
     "all_skills": "Todas las skills",

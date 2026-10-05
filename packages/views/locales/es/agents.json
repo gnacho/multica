@@ -850,6 +850,7 @@
     "status_cancelled": "Cancelada",
     "status_waiting": "Esperando",
     "trigger_initial": "Ejecución inicial",
+    "trigger_text": "Disparador",
     "trigger_comment": "Desde un comentario",
     "trigger_autopilot": "Piloto automático",
     "trigger_retry": "Reintento",
@@ -910,7 +911,8 @@
     "tool_kind_command": "Comandos",
     "tool_kind_write": "Ediciones",
     "tool_kind_read": "Lecturas",
-    "tool_kind_misc": "Otros"
+    "tool_kind_misc": "Otros",
+    "trigger_wakeup": "Activación"
   },
   "task_failure": {
     "cancelled_by_system": "Cancelada por el sistema",
