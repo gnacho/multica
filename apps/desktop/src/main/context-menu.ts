@@ -148,6 +148,7 @@ const labelsByLocale: Record<string, ContextMenuLabels> = {
   es: {
     openLink: "Abrir enlace en el navegador",
     copyLinkAddress: "Copiar dirección del enlace",
+    copyImage: "Copiar imagen",
   },
 };
 
