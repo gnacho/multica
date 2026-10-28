@@ -1,7 +1,6 @@
 {
   "page": {
     "title": "Agentes",
-    "tagline": "Compañeros de IA que cogen incidencias, comentan y actualizan el estado.",
     "learn_more": "Más información →",
     "new_agent": "Nuevo agente",
     "search_placeholder": "Buscar agentes…",
@@ -199,7 +198,8 @@
     "edit_description_title": "Editar descripción",
     "description_placeholder": "¿Qué hace este agente?",
     "save": "Guardar",
-    "cancel": "Cancelar"
+    "cancel": "Cancelar",
+    "qoder_execution_note": "El modelo, las herramientas y las skills se configuran en el agente desde Qoder Cloud Agents."
   },
   "overview": {
     "agent_context": "Agente",
@@ -282,25 +282,16 @@
     "discard_dialog_title": "¿Descartar los cambios sin guardar?",
     "discard_dialog_description": "Hay cambios sin guardar en esta pestaña. Si sales ahora, se descartarán.",
     "discard_keep": "Seguir editando",
-    "discard_confirm": "Descartar cambios"
+    "discard_confirm": "Descartar cambios",
+    "qoder_agent": "Qoder Cloud Agents"
   },
   "creation_studio": {
     "title": "Crear un agente",
     "squad_title": "Crear un agente para este equipo",
     "duplicate_title": "Duplicar {{name}}",
     "back": "Volver",
-    "eyebrow": "Creación de agente",
-    "choose_title": "¿Cómo quieres empezar?",
-    "recommended": "Recomendado",
-    "continue": "Continuar",
-    "step_choose": "Elige un punto de partida",
-    "step_configure": "Revisar y configurar",
     "step_ai": "Crear conversando",
     "modes": {
-      "blank": {
-        "title": "Empezar de cero",
-        "description": "Define tú mismo el nombre, las instrucciones y el runtime."
-      },
       "template": {
         "title": "Usar una plantilla",
         "description": "Parte de instrucciones y skills seleccionadas, y adapta cada detalle a tu espacio de trabajo."
@@ -355,18 +346,17 @@
       "prompt_assistant": "Ayudar a nuestro equipo a planificar y escribir proyectos",
       "thinking": "Actualizando el borrador…",
       "placeholder": "Describe el agente que necesitas…",
-      "send": "Enviar mensaje"
+      "send": "Enviar mensaje",
+      "draft_parse_failed": "Esta respuesta no pudo rellenar el formulario. Pide al asistente que vuelva a generar el borrador o rellénalo a mano."
     },
     "live_draft": "Configuración del agente",
     "live_draft_hint": "Puedes editar el borrador directamente.",
     "duplicate_env_notice": "Se copian las instrucciones, las skills y los argumentos de comando. Las variables de entorno, los servidores MCP y la config de runtime local de la máquina no.",
     "duplicate_runtime_reset_notice": "El runtime original no está disponible, así que esta copia se ejecuta en otro. El modelo, el nivel de razonamiento y la velocidad se limpiaron porque solo se aplican al runtime en el que se eligieron.",
-    "create_and_open": "Crear y abrir agente",
     "create_and_add": "Crear y añadir al equipo",
     "creating": "Creando agente…",
     "create_failed": "No se pudo crear el agente.",
     "name_conflict": "Ya existe un agente con este nombre.",
-    "created": "{{name}} se creó",
     "drafts": {
       "title": "Borradores",
       "untitled": "Borrador sin título",
@@ -376,6 +366,75 @@
       "discard_cancel": "Seguir editando",
       "banner": "Tienes {{count}} borradores sin terminar",
       "pick_hint": "Elige uno para continuar."
+    },
+    "create_agent": "Crear agente",
+    "close": "Cerrar",
+    "steps": {
+      "runtime": "Elige runtime",
+      "configure": "Configurar",
+      "done": "Listo",
+      "aria": "Pasos de creación del agente"
+    },
+    "configure_title": "Configura el agente",
+    "ask_ai": "Que lo escriba la IA",
+    "change_runtime": "Cambiar",
+    "runtime_label": "Runtime",
+    "runtime_loading": "Cargando runtime…",
+    "runtime_missing": "Este runtime ya no está disponible.",
+    "cloud_fields_note": "Las skills, MCP y las sugerencias de conversación solo están disponibles en runtimes locales y remotos.",
+    "done": {
+      "loading": "Terminando…",
+      "title": "{{name}} está listo",
+      "runs_on": "Se ejecuta en {{runtime}}",
+      "joined_squad": "Añadido al equipo {{squad}}",
+      "next": "Siguientes pasos",
+      "assign_title": "Asígnale su primera tarea",
+      "mention_title": "Menciónalo en una incidencia",
+      "squad_title": "Añádelo a un equipo",
+      "open_squad_title": "Abrir {{squad}}",
+      "open_agent": "Abrir agente",
+      "back_to_list": "Volver a agentes"
+    },
+    "runtime_step": {
+      "title": "¿Dónde debe ejecutarse este agente?",
+      "search_placeholder": "Buscar harness o máquinas",
+      "groups": {
+        "machines": "Máquinas",
+        "cloud": "Servicios en la nube"
+      },
+      "this_machine": "Esta máquina",
+      "owner_you": "Tú",
+      "custom_badge": "Personalizado",
+      "web_local_title": "Usa los harness de este equipo con la app de escritorio",
+      "download_desktop": "Descargar la app de escritorio",
+      "harness_count_one": "{{count}} harness",
+      "harness_count_other": "{{count}} harness",
+      "local_starting": "Iniciando el daemon local…",
+      "local_empty_title": "No se ha encontrado ningún harness en esta máquina",
+      "local_empty_hint": "Instala una CLI como Claude Code o Codex y aparecerá aquí.",
+      "more_harnesses_one": "{{count}} más: {{names}}",
+      "more_harnesses_other": "{{count}} más: {{names}}",
+      "add_remote": "Conectar una máquina",
+      "hidden_remote_one": "{{count}} máquina más solo la puede usar su propietario",
+      "hidden_remote_other": "{{count}} máquinas más solo las pueden usar sus propietarios",
+      "remote_warning": "Las tareas se ejecutan en la máquina de {{owner}}, leen y escriben archivos allí, y cuentan contra la cuenta de {{owner}}.",
+      "no_match": "Nada coincide con \"{{query}}\"",
+      "hosted_by": "Por {{vendor}}",
+      "coming_soon": "Próximamente",
+      "qoder_status": {
+        "not_configured": "Sin conectar",
+        "starting": "Iniciando",
+        "ready": "Conectado",
+        "error": "Error",
+        "stopped": "En pausa"
+      },
+      "connect": "Conectar",
+      "settings": "Ajustes",
+      "member_connect": "Pide a un administrador que lo conecte",
+      "member_fix": "Pide a un administrador que lo arregle",
+      "footer_selected": "Seleccionado:",
+      "cancel": "Cancelar",
+      "next": "Siguiente"
     }
   },
   "create_dialog": {
@@ -454,13 +513,22 @@
     "incomplete": "Completa o elimina cada sugerencia antes de guardar.",
     "remove": "Eliminar sugerencia {{number}}",
     "preview_label": "Vista previa de un chat nuevo",
-    "preview_defaults": "Estos son los valores integrados. Añade una sugerencia arriba para reemplazar las tres."
+    "preview_defaults": "Estos son los valores integrados. Añade una sugerencia arriba para reemplazar las tres.",
+    "create_hint": "Opcional. Se muestra en un chat nuevo con este agente.",
+    "edit": "Editar sugerencia {{number}}",
+    "remove_short": "Quitar",
+    "done": "Listo",
+    "untitled": "Sugerencia sin título",
+    "customize": "Personalizar",
+    "defaults_summary_one": "Usando {{count}} sugerencia integrada",
+    "defaults_summary_other": "Usando {{count}} sugerencias integradas"
   },
   "tab_body": {
     "common": {
       "save": "Guardar",
       "add": "Añadir",
-      "unsaved_changes": "Cambios sin guardar"
+      "unsaved_changes": "Cambios sin guardar",
+      "discard": "Descartar"
     },
     "instructions": {
       "intro": "Define el prompt del sistema que se usa en cada ejecución. Se admite Markdown.",
@@ -472,7 +540,13 @@
       "system_layer_hide": "Ocultar",
       "workspace_notes_label": "Notas del espacio de trabajo",
       "workspace_notes_intro": "Añade abajo el contexto y las preferencias de tu equipo. Se aplican sobre las instrucciones que Multica mantiene para este agente. Se admite Markdown.",
-      "workspace_notes_placeholder": "Añade el contexto que este agente debería tener siempre.\n\n# Ejemplo\nNuestro repositorio principal es github.com/acme/platform.\nEscribe las incidencias en inglés aunque conversemos en chino.\nNo desplegamos los viernes."
+      "workspace_notes_placeholder": "Añade el contexto que este agente debería tener siempre.\n\n# Ejemplo\nNuestro repositorio principal es github.com/acme/platform.\nEscribe las incidencias en inglés aunque conversemos en chino.\nNo desplegamos los viernes.",
+      "mode_aria": "Modo del editor",
+      "mode_write": "Escribir",
+      "mode_preview": "Vista previa",
+      "preview_empty": "Todavía no hay nada que previsualizar.",
+      "char_count_one": "{{count}} carácter",
+      "char_count_other": "{{count}} caracteres"
     },
     "env": {
       "intro_readonly": "Se inyectan en el proceso del agente al arrancar. Solo los propietarios y administradores del espacio de trabajo pueden leer o editar los valores; cada revelación y edición queda registrada en el registro de auditoría del espacio de trabajo.",
@@ -655,7 +729,10 @@
       "tls_label": "Usar TLS",
       "tls_hint": "Usa https:// en lugar de http://",
       "saved_toast": "Configuración de enrutado guardada",
-      "save_failed_toast": "No se pudo guardar la configuración de enrutado"
+      "save_failed_toast": "No se pudo guardar la configuración de enrutado",
+      "model_override_label": "Sobrescritura del modelo subyacente",
+      "model_override_hint": "Se aplica a todas las ejecuciones que reclame este agente hasta que se cambie o se limpie. Al limpiarla se usa el modelo vinculado al agente OpenClaw seleccionado, y su identidad no cambia.",
+      "model_override_placeholder": "openrouter/@preset/agent-reasoning"
     },
     "skills": {
       "assigned_title": "Asignadas al agente",
@@ -912,7 +989,8 @@
     "tool_kind_write": "Ediciones",
     "tool_kind_read": "Lecturas",
     "tool_kind_misc": "Otros",
-    "trigger_wakeup": "Activación"
+    "trigger_wakeup": "Activación",
+    "kind_text": "Agente"
   },
   "task_failure": {
     "cancelled_by_system": "Cancelada por el sistema",
@@ -922,6 +1000,7 @@
       "runtime_offline": "Daemon desconectado",
       "runtime_reconnect_timeout": "El daemon no se reconectó a tiempo",
       "runtime_recovery": "El daemon se reinició",
+      "runtime_access_revoked": "Acceso al runtime revocado",
       "timeout": "La ejecución agotó el tiempo",
       "iteration_limit": "Se alcanzó el límite de iteraciones",
       "agent_blocked": "Esperando entrada humana",

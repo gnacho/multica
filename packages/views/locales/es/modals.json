@@ -256,5 +256,15 @@
     "toast_failed": "No se pudo marcar como duplicada",
     "error_target_is_duplicate": "{{identifier}} es en sí misma una duplicada. Elige su original.",
     "error_has_duplicates": "Otras incidencias están marcadas como duplicadas de esta. Elimina esas marcas primero."
+  },
+  "rename_issue": {
+    "title": "Renombrar incidencia",
+    "placeholder": "Título de la incidencia",
+    "input_aria_label": "Renombrar {{identifier}}",
+    "submit": "Guardar",
+    "saving": "Guardando...",
+    "title_required": "Escribe un título",
+    "toast_renamed": "Incidencia renombrada",
+    "toast_failed": "No se pudo renombrar la incidencia"
   }
 }

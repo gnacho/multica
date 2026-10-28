@@ -9,7 +9,8 @@
     "projects": "Proyectos",
     "issues": "Incidencias",
     "cancelled": "Cancelado",
-    "recent": "Reciente"
+    "recent": "Reciente",
+    "workspaces": "Espacios de trabajo"
   },
   "commands": {
     "current_theme_aria": "Tema actual",

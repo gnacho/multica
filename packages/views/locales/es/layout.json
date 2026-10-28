@@ -61,5 +61,12 @@
       "title": "Únete a nuestro Discord",
       "dismiss": "Descartar"
     }
+  },
+  "window": {
+    "go_back": "Atrás",
+    "go_forward": "Adelante",
+    "hold_for_history": "Mantén pulsado para ver el historial",
+    "back_history": "Historial hacia atrás",
+    "forward_history": "Historial hacia delante"
   }
 }

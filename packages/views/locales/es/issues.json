@@ -235,7 +235,9 @@
     "card_project": "Proyecto",
     "card_labels": "Etiquetas",
     "card_child_progress": "Progreso de subincidencias",
-    "show_sub_issues": "Mostrar subincidencias"
+    "show_sub_issues": "Mostrar subincidencias",
+    "columns_section": "Columnas",
+    "columns_locked_by_filter": "Quita el filtro de estado para mostrar u ocultar columnas."
   },
   "view": {
     "tooltip_board": "Vista de tablero",
@@ -360,9 +362,7 @@
     "toggle_collapse": "Plegar o desplegar el carril"
   },
   "board": {
-    "hidden_columns_label": "Columnas ocultas",
     "hide_column": "Ocultar columna",
-    "show_column": "Mostrar columna",
     "add_issue_tooltip": "Añadir incidencia",
     "empty_column": "Sin incidencias",
     "empty_grouping": "Ninguna incidencia coincide",
@@ -474,10 +474,25 @@
     "pull_requests_empty_title": "Sin pull requests enlazados.",
     "pull_request_verdict_conflicting": "Conflictos",
     "pull_request_verdict_ready": "Listo",
-    "pull_request_verdict_passed": "Comprobaciones superadas"
+    "pull_request_verdict_passed": "Comprobaciones superadas",
+    "metadata_close": "Cerrar metadatos",
+    "metadata_copy": "Copiar metadatos",
+    "metadata_view": "Ver metadatos",
+    "metadata_expand": "Expandir diálogo",
+    "metadata_restore": "Restaurar el tamaño del diálogo",
+    "metadata_copy_failed": "No se pudieron copiar los metadatos",
+    "metadata_description": "Datos de clave-valor que registran los agentes y las integraciones para coordinar el flujo de trabajo.",
+    "section_load_failed_retry": "No se pudo cargar. Reintentar",
+    "quick_jump_label": "Navegación rápida",
+    "description_nav_label": "Descripción de la incidencia",
+    "sub_issues_nav_progress": "{{done}}/{{total}} completadas",
+    "thread_nav_show_replies_one": "Mostrar {{count}} respuesta",
+    "thread_nav_show_replies_other": "Mostrar {{count}} respuestas",
+    "thread_nav_hide_replies": "Ocultar respuestas"
   },
   "timeline": {
-    "loading": "Cargando..."
+    "loading": "Cargando...",
+    "jump_to_latest": "Ir a lo más reciente"
   },
   "activity": {
     "created": "creó esta incidencia",
@@ -538,7 +553,8 @@
     "wakeup_checkin_coalesced_one": "{{count}} comprobación silenciosa · última: {{note}}",
     "wakeup_checkin_coalesced_other": "{{count}} comprobaciones silenciosas · última: {{note}}",
     "wakeup_chip_created_by": "activación de {{name}}",
-    "wakeup_chip_system": "Regla del sistema"
+    "wakeup_chip_system": "Regla del sistema",
+    "wakeup_created_scheduled": "añadió una activación para {{agent}}: {{condition}}"
   },
   "comment": {
     "add_reaction": "Añadir reacción",
@@ -746,15 +762,14 @@
     "trigger_image": "[Imagen]",
     "summary_runs_one": "{{count}} ejecución",
     "summary_runs_other": "{{count}} ejecuciones",
-    "agent_time": "{{duration}} de agente",
-    "elapsed": "{{duration}} transcurrido",
     "latest": "Última",
     "open_timeline": "Abrir línea temporal",
     "more_runs_one": "{{count}} más",
     "more_runs_other": "{{count}} más",
     "strip_aria": "Coste acumulado a lo largo del tiempo; abre la línea temporal de ejecuciones",
     "strip_no_usage": "Sin uso registrado",
-    "sparkline_now": "Ahora"
+    "sparkline_now": "Ahora",
+    "jump_to_run": "Ir a la ejecución"
   },
   "terminate_dialog": {
     "title": "¿Detener esta ejecución?",
@@ -780,7 +795,9 @@
     "delete_dialog_desc_one": "Esta acción no se puede deshacer. Se eliminará permanentemente la incidencia seleccionada y todos sus datos asociados.",
     "delete_dialog_desc_other": "Esta acción no se puede deshacer. Se eliminarán permanentemente las incidencias seleccionadas y todos sus datos asociados.",
     "delete_dialog_warning": "Cualquier miembro del espacio de trabajo puede eliminar incidencias.",
-    "cancel": "Cancelar"
+    "cancel": "Cancelar",
+    "update_partial_one": "Actualizada {{updated}} de {{count}} incidencia. El resto no admite este cambio y se quedó como estaba.",
+    "update_partial_other": "Actualizadas {{updated}} de {{count}} incidencias. El resto no admite este cambio y se quedó como estaba."
   },
   "card": {
     "update_failed": "No se pudo actualizar la incidencia",
@@ -814,7 +831,8 @@
     "remove_parent_issue_success": "Incidencia principal quitada",
     "add_sub_issue": "Añadir subincidencia...",
     "delete_issue": "Eliminar incidencia",
-    "mark_duplicate": "Marcar como duplicada..."
+    "mark_duplicate": "Marcar como duplicada...",
+    "rename_issue": "Renombrar incidencia"
   },
   "pickers": {
     "custom_property": {
@@ -834,7 +852,9 @@
       "open_link": "Abrir enlace",
       "archived_hint": "Propiedad archivada; el valor es de solo lectura",
       "unknown_value": "No disponible",
-      "unknown_value_hint": "Este valor lo estableció una versión más reciente de Multica y no se puede editar aquí; actualiza la app o bórralo"
+      "unknown_value_hint": "Este valor lo estableció una versión más reciente de Multica y no se puede editar aquí; actualiza la app o bórralo",
+      "url_scheme_required": "La URL debe empezar por http:// o https://.",
+      "remove_item": "Quitar {{value}}"
     },
     "filter_options_aria": "Opciones de filtro",
     "no_results": "Sin resultados",
@@ -1223,7 +1243,9 @@
       "missing_issue": "Elige una incidencia.",
       "checked": "Marcado",
       "unchecked": "Sin marcar",
-      "assignee_comment_hint": "{{name}} es el asignado y ya se ejecuta cuando un miembro comenta. Esta regla se une a esa ejecución en lugar de iniciar otra; añádela solo para darle una instrucción extra a esa ejecución."
+      "assignee_comment_hint": "{{name}} es el asignado y ya se ejecuta cuando un miembro comenta. Esta regla se une a esa ejecución en lugar de iniciar otra; añádela solo para darle una instrucción extra a esa ejecución.",
+      "pr_conflicts": "Tiene conflictos de fusión",
+      "other_blocked": "pasa a Bloqueado"
     },
     "system": {
       "badge": "Sistema",
@@ -1274,7 +1296,9 @@
       "unknown_label": "una etiqueta eliminada",
       "unknown_property": "una propiedad eliminada",
       "checked": "marcado",
-      "unchecked": "sin marcar"
+      "unchecked": "sin marcar",
+      "pr_conflicts": "Cuando un PR enlazado tiene conflictos de fusión",
+      "other_blocked": "Cuando {{issue}} pasa a Bloqueado"
     },
     "wait": {
       "reply_from": "Esperando la respuesta de {{name}}",
@@ -1295,7 +1319,9 @@
       "time": "{{time}} · activa a {{agent}}",
       "header": "{{agent}}: {{what}}",
       "paused": "Activación pausada",
-      "open": "Mostrar activaciones"
+      "open": "Mostrar activaciones",
+      "pr_conflicts": "Vigilando conflictos de fusión",
+      "other_blocked": "Esperando a que {{issue}} se bloquee"
     },
     "paused": {
       "max_fires": "Detenida tras alcanzar {{count}} ejecuciones",
@@ -1393,18 +1419,53 @@
     "day_yesterday": "Ayer",
     "day_runs_one": "{{count}} ejecución",
     "day_runs_other": "{{count}} ejecuciones",
-    "quoted": "«{{text}}»",
+    "quoted": "“{{text}}”",
     "cost_input": "Entrada",
     "cost_output": "Salida",
     "cost_cache_read": "Lectura de caché",
     "cost_cache_write": "Escritura de caché",
-    "cost_breakdown_aria": "Desglose de coste: {{cost}}",
     "no_usage": "Sin uso registrado",
     "tooltip_total": "Total hasta ahora {{cost}}",
     "hover_no_run": "Sin ejecución",
     "hover_idle": "Inactivo {{duration}}",
     "note_unmapped": "No hay precio registrado para {{models}}; sus tokens se cuentan pero su coste no.",
-    "note_estimate": "El coste se estima a partir de las tarifas publicadas de los modelos, salvo cuando el proveedor reporta su propia cifra."
+    "note_estimate": "El coste se estima a partir de las tarifas publicadas de los modelos, salvo cuando el proveedor reporta su propia cifra.",
+    "stat_tokens": "Tokens",
+    "stat_output": "Salida",
+    "tokens_cached": "{{percent}} en caché",
+    "elapsed_note": "{{duration}} transcurrido",
+    "view_label": "Vista de la gráfica",
+    "view_runs": "Por ejecución",
+    "view_cumulative": "Acumulado",
+    "cumulative_aria_one": "Coste acumulado a lo largo del tiempo: {{cost}} en {{count}} ejecución",
+    "cumulative_aria_other": "Coste acumulado a lo largo del tiempo: {{cost}} en {{count}} ejecuciones",
+    "metric_label": "Métrica de la gráfica",
+    "metric_cost": "Coste",
+    "metric_tokens": "Tokens",
+    "metric_time": "Tiempo del agente",
+    "unit_run": "por ejecución",
+    "stack_agent": "por agente",
+    "stack_type": "por tipo de token",
+    "by_agent": "Por agente",
+    "by_model": "Por modelo",
+    "others": "Otros",
+    "col_time": "Hora",
+    "col_trigger": "Disparador",
+    "col_agent": "Agente",
+    "col_model": "Modelo",
+    "col_duration": "Duración",
+    "col_tokens": "Tokens",
+    "col_cost": "Coste",
+    "tokens_count": "{{tokens}} tokens",
+    "details_toggle": "Detalles de la ejecución",
+    "detail_breakdown": "Desglose de costes",
+    "detail_total": "Total",
+    "detail_status": "Estado",
+    "detail_model": "Modelo",
+    "detail_cache": "Aciertos de caché",
+    "cache_hit_value": "{{percent}} · {{amount}} ahorrados",
+    "detail_time": "Hora",
+    "detail_branch": "Rama"
   },
   "deliverables": {
     "section_title": "Entregables",
@@ -1439,5 +1500,277 @@
     "overview_close": "Cerrar",
     "overview_empty": "No hay entregables de este tipo.",
     "group_comment_by": "Comentario de {{name}}"
+  },
+  "workflows": {
+    "default_name": "Predeterminado",
+    "default_summary": "Todos los estados, sin traspasos",
+    "hands_off_to": "Traspasa a {{name}}",
+    "not_in_workflow": "No forma parte del flujo de trabajo {{name}}",
+    "drop_blocked": "{{status}} no forma parte del flujo de trabajo {{name}}",
+    "create_handoff_hint": "Se traspasará a {{name}}",
+    "handler": {
+      "none": "Mantener al asignado",
+      "agent": "Agente",
+      "squad": "Equipo",
+      "member": "Miembro",
+      "project_lead": "Líder del proyecto",
+      "creator": "Creador de la incidencia",
+      "project_lead_named": "{{name}} (líder del proyecto)"
+    },
+    "settings": {
+      "title": "Flujos de trabajo",
+      "new": "Nuevo flujo de trabajo",
+      "projects_one": "{{count}} proyecto",
+      "projects_other": "{{count}} proyectos",
+      "default_projects": "Proyectos sin flujo de trabajo",
+      "no_projects": "Aún sin usar",
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "delete_title": "¿Eliminar {{name}}?",
+      "delete_description": "Las incidencias conservan sus estados.",
+      "delete_in_use": "Cambia antes sus proyectos a otro flujo de trabajo.",
+      "deleted": "Flujo de trabajo eliminado",
+      "delete_error": "No se pudo eliminar el flujo de trabajo",
+      "statuses_title": "Biblioteca de estados",
+      "statuses_one": "{{count}} estado",
+      "statuses_other": "{{count}} estados",
+      "handoffs_one": "{{count}} paso de traspaso",
+      "handoffs_other": "{{count}} pasos de traspaso",
+      "no_handoffs": "Sin traspasos",
+      "used_by_one": "Lo usa {{count}} proyecto: {{names}}",
+      "used_by_other": "Lo usan {{count}} proyectos: {{names}}",
+      "used_by_default_one": "Lo usa {{count}} proyecto: {{names}}, y las incidencias sin proyecto",
+      "used_by_default_other": "Lo usan {{count}} proyectos: {{names}}, y las incidencias sin proyecto",
+      "used_by_default_none": "Lo usan las incidencias sin proyecto",
+      "new_blank": "Flujo de trabajo en blanco",
+      "from_template": "Desde una plantilla"
+    },
+    "editor": {
+      "create_title": "Nuevo flujo de trabajo",
+      "edit_title": "Editar flujo de trabajo",
+      "name": "Nombre",
+      "name_placeholder": "p. ej. Entrega",
+      "description": "Descripción",
+      "steps": "Pasos",
+      "add_step": "Añadir paso",
+      "start": "Inicio",
+      "set_start": "Marcar como paso inicial",
+      "move_up": "Subir",
+      "move_down": "Bajar",
+      "remove": "Quitar columna",
+      "on_enter": "Al entrar, traspasar a",
+      "choose_target": "Elegir…",
+      "instructions": "Instrucciones del traspaso",
+      "instructions_placeholder": "¿Qué debe ocurrir en este paso?",
+      "next": "Al terminar, pasar a",
+      "back": "Si se rechaza, devolver a",
+      "none_option": "Sin definir",
+      "save": "Guardar",
+      "create": "Crear",
+      "cancel": "Cancelar",
+      "saved": "Flujo de trabajo guardado",
+      "created": "Flujo de trabajo creado",
+      "error": "No se pudo guardar el flujo de trabajo",
+      "used_by_note_one": "Lo usa {{count}} proyecto: {{names}}. Los cambios guardados se aplican de inmediato.",
+      "used_by_note_other": "Lo usan {{count}} proyectos: {{names}}. Los cambios guardados se aplican de inmediato.",
+      "unused_note": "Aún no lo usa ningún proyecto. Elígelo en las propiedades de un proyecto.",
+      "duplicate": "Duplicar como flujo de trabajo nuevo",
+      "copy_name": "Copia de {{name}}",
+      "more": "Más acciones",
+      "steps_hint": "Arrastra para reordenar las columnas centrales. Backlog y Bloqueado son opcionales. Al guardar se crea un estado nuevo.",
+      "status_needs_admin": "{{names}} serían estados nuevos. Solo los administradores del espacio de trabajo pueden añadir estados: quita estas columnas o pide a un administrador que añada antes los estados.",
+      "reorder": "Reordenar {{name}}",
+      "card_hand_to": "Traspasar a",
+      "card_then": "luego → {{status}}",
+      "status": "Estado",
+      "status_hint": "Los estados vienen de la biblioteca. Renómbralos o cámbiales el color allí; el cambio llega a todos los flujos de trabajo que los usan.",
+      "handler_hint_on": "Cuando una incidencia entra en este paso, su asignado pasa a ser este responsable; un agente o un equipo empieza a trabajar de inmediato.",
+      "handler_hint_off": "Al entrar en este paso se mantiene el asignado y no se inicia ninguna ejecución.",
+      "handler_hint_lead": "Se resuelve por proyecto: el líder de cada proyecto.",
+      "handler_hint_creator": "Se resuelve por incidencia: quien la creó.",
+      "target_agent": "Agente",
+      "target_squad": "Equipo · el líder reparte",
+      "target_member": "Miembro",
+      "instructions_hint": "Se envía al responsable con esta ejecución, junto con la descripción y los comentarios de la incidencia.",
+      "next_hint": "El responsable mueve la incidencia por su cuenta y solo la devuelve para rehacer trabajo, no por bloqueos. Que una ejecución termine nunca cambia el estado.",
+      "preview_brief": "Ver el encargo del agente",
+      "preview_title": "Encargo del paso “{{status}}”",
+      "preview_description": "Lo que recibe la ejecución del responsable cuando una incidencia entra en este paso. No hace falta guardar los cambios para verlo.",
+      "description_placeholder": "Añadir una descripción",
+      "select_step": "Selecciona una columna para definir a quién traspasa las incidencias.",
+      "unsaved": "Cambios sin guardar",
+      "not_found": "Este flujo de trabajo ya no existe.",
+      "default_note": "Predeterminado es el tablero de todos los proyectos que no eligen un flujo de trabajo, y de las vistas fuera de un proyecto.",
+      "new_badge": "Nuevo",
+      "columns": "Columnas",
+      "include_status": "Incluir {{status}}",
+      "step_off_short": "No",
+      "step_off": "Desactivado: este flujo de trabajo deja fuera el estado. Actívalo en la lista de pasos para usarlo.",
+      "status_new_hint": "Un estado nuevo. Se añade a la biblioteca de estados al guardar.",
+      "no_other_status": "Todos los estados ya son un paso.",
+      "no_handoff_step": "Este paso no traspasa: las incidencias que entran en él mantienen su asignado y no inician ninguna ejecución."
+    },
+    "mapping": {
+      "title": "Mover incidencias a {{name}}",
+      "description": "Estos estados no están en el flujo de trabajo. Elige a dónde van sus incidencias; las que están en otros estados no se mueven.",
+      "issues_one": "{{count}} incidencia",
+      "issues_other": "{{count}} incidencias",
+      "no_handoff": "Mover incidencias así no las traspasa ni inicia ejecuciones.",
+      "confirm": "Mover y cambiar",
+      "confirm_save": "Mover y guardar",
+      "cancel": "Cancelar",
+      "switch_title": "¿Cambiar “{{project}}” a “{{workflow}}”?",
+      "switch_description_one": "{{project}} tiene {{count}} incidencia. Solo necesitan un estado nuevo las incidencias que están en estados que “{{workflow}}” no tiene.",
+      "switch_description_other": "{{project}} tiene {{count}} incidencias. Solo necesitan un estado nuevo las incidencias que están en estados que “{{workflow}}” no tiene.",
+      "needs_mapping_one": "Necesita un estado nuevo · {{count}} incidencia",
+      "needs_mapping_other": "Necesitan un estado nuevo · {{count}} incidencias",
+      "unchanged_one": "{{count}} incidencia restante ({{statuses}}) mantiene su estado - ambos flujos de trabajo lo tienen.",
+      "unchanged_other": "{{count}} incidencias restantes ({{statuses}}) mantienen su estado - ambos flujos de trabajo lo tienen.",
+      "switch_note": "Cambiar de flujo es un cambio de administrador: no traspasa nada, no inicia agentes y mantiene a los asignados. Las vistas y los filtros guardados funcionan por estado y no se ven afectados.",
+      "confirm_count_one": "Cambiar y actualizar {{count}} incidencia",
+      "confirm_count_other": "Cambiar y actualizar {{count}} incidencias",
+      "confirm_plain": "Cambiar",
+      "edit_title": "¿Guardar “{{workflow}}”?",
+      "edit_description": "Algunas incidencias de proyectos que usan este flujo de trabajo están en estados que has quitado. Elige a dónde van; el resto no se mueve.",
+      "confirm_save_count_one": "Guardar y actualizar {{count}} incidencia",
+      "confirm_save_count_other": "Guardar y actualizar {{count}} incidencias",
+      "switched_one": "“{{project}}” ahora usa “{{workflow}}”; {{count}} incidencia actualizada",
+      "switched_other": "“{{project}}” ahora usa “{{workflow}}”; {{count}} incidencias actualizadas",
+      "nothing_moves": "El estado de cada incidencia está en ambos flujos de trabajo, así que nada se mueve."
+    },
+    "project": {
+      "label": "Flujo de trabajo",
+      "switched": "Flujo de trabajo cambiado",
+      "error": "No se pudo cambiar el flujo de trabajo",
+      "picker_title": "Elegir un flujo de trabajo",
+      "default_badge": "Predeterminado",
+      "used_by_short": "Lo usan: {{names}}",
+      "used_by_nobody": "Aún sin proyectos",
+      "manage": "Gestionar flujos de trabajo…",
+      "picker_more": "Crea más flujos de trabajo en Ajustes → Flujos de trabajo."
+    },
+    "picker": {
+      "header": "{{workflow}} · del proyecto “{{project}}”",
+      "header_no_project": "Estados de {{workflow}} · sin proyecto",
+      "footer": "Solo se muestran los estados del flujo de trabajo de esta incidencia. A la derecha aparece a quién se le traspasa al entrar en el estado."
+    },
+    "confirm": {
+      "title": "¿Mover {{issue}} a “{{status}}”?",
+      "reassign_run": "El asignado pasa de {{from}} a {{to}}, que empieza a trabajar de inmediato.",
+      "reassign": "El asignado pasa de {{from}} a {{to}}.",
+      "same_handler_run": "{{to}} sigue como asignado y empieza en este paso.",
+      "unassigned": "Sin asignar",
+      "running_title": "{{name}} sigue en ejecución (desde hace {{duration}})",
+      "stop_label": "Detener la ejecución de {{name}}",
+      "stop_hint": "El código y los comentarios que ya ha generado se conservan. Si no la detienes, dos agentes trabajarán a la vez en esta incidencia.",
+      "queued_title": "La ejecución de {{name}} sigue en cola",
+      "cancel_queued_label": "Cancelar la ejecución en cola de {{name}}",
+      "queued_hint": "Si no la cancelas, {{name}} empezará más tarde en esta incidencia.",
+      "brief_toggle": "Lo que recibe {{name}}",
+      "confirm": "Mover a {{status}}",
+      "cancel": "Cancelar",
+      "minutes_one": "{{count}} minuto",
+      "minutes_other": "{{count}} minutos",
+      "hours_one": "{{count}} hora",
+      "hours_other": "{{count}} horas",
+      "under_minute": "menos de un minuto",
+      "error": "No se pudo mover la incidencia",
+      "project_title": "¿Mover {{issue}} a {{project}}?",
+      "project_confirm": "Mover a {{project}}"
+    },
+    "board": {
+      "drop_hint_run": "Suelta para traspasar a {{name}} e iniciar la ejecución",
+      "drop_hint": "Suelta para traspasar a {{name}}"
+    },
+    "timeline": {
+      "handed_to": "Traspasada a",
+      "run_started": "e inició una ejecución ·",
+      "member_no_run": "(miembro, sin ejecución)",
+      "show_brief": "Ver el encargo del traspaso",
+      "hide_brief": "Ocultar el encargo del traspaso",
+      "brief_header": "El encargo del flujo de trabajo que recibió esta ejecución"
+    },
+    "detail": {
+      "follows_project": "(del proyecto)",
+      "card_title": "{{workflow}} · de {{project}}"
+    },
+    "list_separator": ", ",
+    "handoff": {
+      "add": "Traspasar a…",
+      "title": "Cuando una incidencia entra en “{{status}}”",
+      "next_default": "Siguiente columna ({{status}})",
+      "saved": "Traspaso guardado",
+      "error": "No se pudo guardar el traspaso",
+      "read_only": "Los traspasos pertenecen al flujo de trabajo; los cambian su propietario y los administradores del espacio de trabajo.",
+      "to": "Traspasar a",
+      "members": "Miembros",
+      "mode_none": "Sin traspaso",
+      "mode_none_hint": "El asignado no cambia",
+      "mode_agent": "Traspasar a un agente",
+      "mode_agent_hint": "Inicia una ejecución de inmediato",
+      "mode_member": "Traspasar a un miembro",
+      "mode_member_hint": "Cambia el asignado; no se ejecuta nada",
+      "project_lead_hint": "Si el líder del proyecto es un agente, inicia una ejecución.",
+      "pick_agent": "Elegir un agente",
+      "pick_member": "Elegir un miembro",
+      "search_agents": "Buscar agentes",
+      "search_members": "Buscar miembros",
+      "instructions": "Qué hace este paso",
+      "scope_line": "Forma parte del flujo de trabajo {{workflow}}",
+      "scope_line_shared": "Forma parte de {{workflow}}, que también usan {{projects}}",
+      "scope_more": "{{names}} y {{count}} más",
+      "scope_question": "¿Dónde se aplica este cambio?",
+      "scope_all": "Los {{count}} proyectos que usan {{workflow}}",
+      "scope_all_hint": "{{projects}} pasan a usar el nuevo traspaso",
+      "scope_project": "Solo {{project}}",
+      "scope_project_hint": "Copia el flujo de trabajo como “{{copy}}” para {{project}}; los demás proyectos no cambian",
+      "saved_copy": "Guardado en “{{workflow}}”, que solo usa {{project}}"
+    },
+    "columns": {
+      "new_status": "Estado nuevo…",
+      "name_placeholder": "Nombre del estado",
+      "add": "Añadir"
+    },
+    "menu": {
+      "view_flow": "Ver el flujo completo",
+      "switch": "Cambiar de flujo de trabajo"
+    },
+    "flow": {
+      "title": "Flujo de trabajo {{workflow}}",
+      "scope_own": "Solo este proyecto usa este flujo de trabajo.",
+      "no_handoff_here": "Sin traspaso",
+      "scope_shared_one": "{{count}} proyecto usa este flujo de trabajo. Sus traspasos se aplican a todos los proyectos que lo usan.",
+      "scope_shared_other": "{{count}} proyectos usan este flujo de trabajo. Sus traspasos se aplican a todos ellos."
+    },
+    "templates": {
+      "delivery": {
+        "name": "Entrega",
+        "summary": "Construir, revisar y pasar QA antes de terminar",
+        "statuses": {
+          "qa": "QA"
+        }
+      },
+      "content": {
+        "name": "Contenido",
+        "summary": "Redactar, editar y programar",
+        "statuses": {
+          "drafting": "En redacción",
+          "editing": "En edición",
+          "scheduled": "Programado"
+        }
+      },
+      "community": {
+        "name": "Comunidad",
+        "summary": "Clasificar, responder y esperar al informador",
+        "statuses": {
+          "triage": "Triaje",
+          "replying": "Respondiendo",
+          "waiting": "Esperando al informador"
+        }
+      }
+    }
+  },
+  "hover_card": {
+    "created_updated": "creada {{created}} · actualizada {{updated}}"
   }
 }

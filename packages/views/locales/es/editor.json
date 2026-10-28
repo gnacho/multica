@@ -124,7 +124,8 @@
     "copy_code": "Copiar código",
     "show_preview": "Mostrar vista previa",
     "show_source": "Mostrar código fuente",
-    "fullscreen": "Pantalla completa"
+    "fullscreen": "Pantalla completa",
+    "close_preview": "Cerrar"
   },
   "file_card": {
     "uploading": "Subiendo {{filename}}"
@@ -168,5 +169,18 @@
     "error_at_line": "{{message}} (línea {{line}})",
     "view_source": "Ver fuente",
     "copy_error": "Copiar error"
+  },
+  "table": {
+    "reset_widths": "Restablecer anchos",
+    "expand": "Expandir tabla",
+    "copy_markdown": "Copiar como Markdown",
+    "copy_csv": "Copiar como CSV",
+    "copied": "Copiado",
+    "resize_column": "Cambiar el ancho de la columna {{name}}",
+    "expanded_title": "Tabla",
+    "filter_placeholder": "Filtrar filas",
+    "clear_filter": "Borrar filtro",
+    "no_matches": "Ninguna fila coincide",
+    "close": "Cerrar"
   }
 }

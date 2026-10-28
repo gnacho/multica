@@ -79,7 +79,11 @@
       "cancelled": "Se decidió no hacerlo."
     },
     "pr_auto_complete_badge": "Se establece al fusionar los PR",
-    "built_in_locked": "Los estados integrados controlan el comportamiento del sistema, así que no se pueden editar ni archivar. Sí puedes reordenarlos."
+    "built_in_locked": "Los estados integrados controlan el comportamiento del sistema, así que no se pueden editar ni archivar. Sí puedes reordenarlos.",
+    "builtin_badge": "Integrado",
+    "workflow_usage_one": "{{count}} flujo de trabajo lo usa",
+    "workflow_usage_other": "{{count}} flujos de trabajo lo usan",
+    "workflow_usage_none": "En ningún flujo de trabajo"
   },
   "quick_actions": {
     "title": "Acciones rápidas",
@@ -126,7 +130,9 @@
     "prompt_hint": "Se envía tal cual. El agente ya ve la incidencia.",
     "template_not_supported": "Las variables aún no se admiten: elimina {{token}}. El agente ya lee esta incidencia.",
     "delete_title": "¿Eliminar esta acción rápida?",
-    "delete_description": "Desaparecerá del panel lateral de todas las incidencias. Las ejecuciones anteriores quedan en el registro de ejecución. Archívala si puede que la quieras recuperar."
+    "delete_description": "Desaparecerá del panel lateral de todas las incidencias. Las ejecuciones anteriores quedan en el registro de ejecución. Archívala si puede que la quieras recuperar.",
+    "no_target": "Sin objetivo",
+    "no_target_hint": "Publica un mensaje sin mencionar a nadie."
   },
   "auto_save": {
     "saving": "Guardando…",
@@ -144,7 +150,8 @@
     "language": {
       "title": "Idioma",
       "english": "English",
-      "chinese": "中文",
+      "chinese": "简体中文",
+      "chinese_traditional": "繁體中文",
       "korean": "한국어",
       "japanese": "日本語",
       "french": "Français",
@@ -388,7 +395,8 @@
       "apps": "Apps conectadas",
       "channels": "Mensajería",
       "code": "Código",
-      "wakeups": "Despertares"
+      "wakeups": "Despertares",
+      "workflows": "Flujos de trabajo"
     },
     "groups": {
       "personal": "Personal",
@@ -527,7 +535,9 @@
       "checkbox": "Casilla",
       "url": "URL",
       "actor": "Miembro",
-      "multi_actor": "Miembros"
+      "multi_actor": "Miembros",
+      "multi_text": "Lista de texto",
+      "multi_url": "Lista de URL"
     },
     "actions": {
       "open": "Acciones de {{name}}",
@@ -656,7 +666,6 @@
     },
     "system": {
       "title": "Notificaciones del sistema",
-      "description": "Muestra notificaciones del sistema cuando Multica está en segundo plano.",
       "label": "Mostrar notificaciones del sistema"
     },
     "browser": {
@@ -799,7 +808,7 @@
     "feature_co_author_description_suffix": "a los commits creados por agentes.",
     "feature_auto_link_label": "Vincular incidencias y PR automáticamente",
     "toast_failed": "Error al actualizar la configuración de GitHub",
-    "feature_auto_link_description": "Enlaza un PR con la incidencia cuyo ID, p. ej. {{example}}, aparece en su título o nombre de rama, o tras «Closes» en su descripción.",
+    "feature_auto_link_description": "Enlaza un PR con la incidencia cuyo ID, p. ej. {{example}}, aparece en su título o nombre de rama, o tras “Closes” en su descripción.",
     "pause": "Pausar funciones de GitHub",
     "resume": "Reanudar funciones de GitHub",
     "status_paused": "En pausa"
@@ -1199,6 +1208,15 @@
   "desktop": {
     "tabs": {
       "updates": "Actualizaciones"
+    },
+    "tab_bar": {
+      "pin": "Fijar pestaña",
+      "unpin": "Desfijar pestaña",
+      "close": "Cerrar pestaña",
+      "close_others": "Cerrar las demás pestañas",
+      "open_window": "Abrir en ventana nueva",
+      "new": "Pestaña nueva",
+      "pinned_name": "{{title}} (fijada)"
     },
     "updates": {
       "title": "Actualizaciones",

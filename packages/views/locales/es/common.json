@@ -128,5 +128,12 @@
   },
   "navigation": {
     "open_in_new_tab": "Abrir en una pestaña nueva"
-  }
+  },
+  "daemon_setup": {
+    "loading": "Cargando los ajustes de conexión...",
+    "error": "No se pudieron cargar los ajustes de conexión. Comprueba tu conexión. Se reintentará automáticamente.",
+    "unknown": "Este servidor no ha confirmado sus ajustes de conexión. Pide a tu administrador que actualice el servidor.",
+    "incomplete": "Los ajustes de conexión están incompletos. Pide a tu administrador que configure las URL públicas de este servidor."
+  },
+  "more_actions": "Más acciones"
 }

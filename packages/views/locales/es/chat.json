@@ -72,7 +72,8 @@
       "context_overflow": "Esta conversación se hizo demasiado larga para el modelo. Empieza una sesión nueva, o divide tu petición en pasos más pequeños.",
       "runtime_missing_executable": "La CLI del agente no se pudo ejecutar en esta máquina. Comprueba que está instalada correctamente y en el PATH, y reintenta.",
       "runtime_version_unsupported": "La CLI del agente es demasiado antigua para este runtime. Actualízala y reintenta.",
-      "fallback": "Algo salió mal y el agente no pudo terminar de responder. Inténtalo de nuevo."
+      "fallback": "Algo salió mal y el agente no pudo terminar de responder. Inténtalo de nuevo.",
+      "runtime_access_revoked": "Se revocó el acceso al runtime. Vincula el agente a un runtime accesible antes de iniciar otra ejecución."
     },
     "tools_one": "{{count}} herramienta",
     "tools_other": "{{count}} herramientas",
@@ -168,7 +169,9 @@
       "label": "Recomienda una acción",
       "prompt": "Revisa lo que sabes de mi espacio de trabajo y recomiéndame una primera acción útil."
     },
-    "customize": "Personalizar inicios"
+    "customize": "Personalizar inicios",
+    "uploading": "Espera a que terminen las subidas antes de usar una sugerencia.",
+    "draft_in_progress": "Envía o borra tu borrador antes de usar una sugerencia."
   },
   "onboarding_cards": {
     "aria_label": "Formas de empezar",
